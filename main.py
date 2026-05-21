@@ -1,4 +1,7 @@
-import HumanClass as Human
+from fastapi import FastAPI
 
-new_human = Human("evr1lay", 14)
-print(new_human.name)
+app = FastAPI()
+
+@app.get("/")
+def read_books():
+    return "Poshel nahuy"
